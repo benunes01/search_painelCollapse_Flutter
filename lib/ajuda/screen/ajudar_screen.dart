@@ -1,17 +1,17 @@
-import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:searchpainel/ajuda/bloc/ajuda_bloc.dart';
 import 'package:searchpainel/widgets/Header.dart';
 import 'package:searchpainel/widgets/ScrollShadowContainer.dart';
 import 'package:searchpainel/widgets/painel.dart';
+import 'package:searchpainel/bloc/bloc_provider.dart';
 
 class Ajuda extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context, width: 414, height: 896, allowFontScaling: false);
 
-    final AjudaBloc ajudabloc = BlocProvider.of<AjudaBloc>(context);
+    final ajudabloc = BlocProvider.of(context).ajudaBloc;
 
     return Scaffold(
       appBar: Header(
