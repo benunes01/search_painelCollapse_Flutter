@@ -25,17 +25,7 @@
 
 <h4>- Uso de um Bloc global</h4>
 
-<br>
 
-<h3>Dependencias</h3>
-
-<h4>- flutter_screenutil</h4>
-
-<h4>- flutter_collapse</h4>
-
-<h4>- rxdart</h4>
-
-<h4>- bloc_pattern</h4>
 
 
 
