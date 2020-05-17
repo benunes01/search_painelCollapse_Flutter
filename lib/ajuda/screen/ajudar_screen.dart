@@ -56,324 +56,15 @@ class Ajuda extends StatelessWidget {
               },
             ),
           ),
-          Expanded(
-            child: ScrollShadowContainer(
-              elevation: MaterialElevation.the4dp,
-              child: ListView(
-                children: <Widget>[
-                  SizedBox(
-                    height: ScreenUtil().setHeight(10),
-                  ),
-                  StreamBuilder<Object>(
-                      stream: ajudabloc.painel1,
-                      builder: (context, snapshot) {
-                        //Transformando a lista em minuscula.
-                        List<String> filterLowerCase = [];
-                        ajudabloc.listaTitulos.forEach((element) {
-                          filterLowerCase.add(element.toLowerCase());
-                        });
-                        var filter = filterLowerCase
-                            .where((t) => t.contains(
-                                ajudabloc.controller.text.toLowerCase()))
-                            .toList();
-
-                        if (filter.contains(ajudabloc.listaTitulos
-                                //elementAt(equivalente ao titulo)
-                                .elementAt(0)
-                                .toString()
-                                .toLowerCase()) ||
-                            ajudabloc.controller.text.length == 0) {
-                          print(ajudabloc.controller.text.length);
-                          return Painel(
-                            titulo: ajudabloc.listaTitulos.elementAt(0),
-                            corpo:
-                                'Você pode preencher esse formulário aqui no nossa página que eu já vou direcionar diretamente para nosso time comercial, assim já vamos selecionando as melhores opções de crédito de acordo com seu perfil, uma dica; respondemos tudo lá no email cadastrado.',
-                            painel: ajudabloc.painel1,
-                            snapshot: snapshot,
-                            color: ajudabloc.painel1.value == true
-                                ? Colors.blueAccent
-                                : Colors.black,
-                          );
-                        } else {
-                          print('Caiu no else');
-                          return Container();
-                        }
-                      }),
-                  SizedBox(
-                    height: ScreenUtil().setHeight(10),
-                  ),
-                  StreamBuilder<Object>(
-                      stream: ajudabloc.painel2,
-                      builder: (context, snapshot) {
-                        //Transformando a lista em minuscula.
-                        List<String> filterLowerCase = [];
-                        ajudabloc.listaTitulos.forEach((element) {
-                          filterLowerCase.add(element.toLowerCase());
-                        });
-                        var filter = filterLowerCase
-                            .where((t) => t.contains(
-                                ajudabloc.controller.text.toLowerCase()))
-                            .toList();
-
-                        if (filter.contains(ajudabloc.listaTitulos
-                                .elementAt(1)
-                                .toString()
-                                .toLowerCase()) ||
-                            ajudabloc.controller.text.length == 0) {
-                          return Painel(
-                            titulo: ajudabloc.listaTitulos.elementAt(1),
-                            corpo:
-                                'Você pode preencher esse formulário aqui no nossa página que eu já vou direcionar diretamente para nosso time comercial, assim já vamos selecionando as melhores opções de crédito de acordo com seu perfil, uma dica; respondemos tudo lá no email cadastrado.',
-                            painel: ajudabloc.painel2,
-                            snapshot: snapshot,
-                            color: ajudabloc.painel2.value == true
-                                ? Colors.blueAccent
-                                : Colors.black,
-                          );
-                        } else {
-                          return Container();
-                        }
-                      }),
-                  SizedBox(
-                    height: ScreenUtil().setHeight(10),
-                  ),
-                  StreamBuilder<Object>(
-                      stream: ajudabloc.painel3,
-                      builder: (context, snapshot) {
-                        //Transformando a lista em minuscula.
-                        List<String> filterLowerCase = [];
-                        ajudabloc.listaTitulos.forEach((element) {
-                          filterLowerCase.add(element.toLowerCase());
-                        });
-                        var filter = filterLowerCase
-                            .where((t) => t.contains(
-                                ajudabloc.controller.text.toLowerCase()))
-                            .toList();
-                        // ----------------------------------
-                        if (filter.contains(ajudabloc.listaTitulos
-                                .elementAt(0)
-                                .toString()
-                                .toLowerCase()) ||
-                            ajudabloc.controller.text.length == 0) {
-                          return Painel(
-                            titulo: ajudabloc.listaTitulos.elementAt(0),
-                            corpo: 'Corpo',
-                            painel: ajudabloc.painel3,
-                            snapshot: snapshot,
-                            color: ajudabloc.painel3.value == true
-                                ? Colors.blueAccent
-                                : Colors.black,
-                          );
-                        } else {
-                          return Container();
-                        }
-                      }),
-                  SizedBox(
-                    height: ScreenUtil().setHeight(10),
-                  ),
-                  StreamBuilder<Object>(
-                      stream: ajudabloc.painel4,
-                      builder: (context, snapshot) {
-                        //Transformando a lista em minuscula.
-                        List<String> filterLowerCase = [];
-                        ajudabloc.listaTitulos.forEach((element) {
-                          filterLowerCase.add(element.toLowerCase());
-                        });
-                        var filter = filterLowerCase
-                            .where((t) => t.contains(
-                                ajudabloc.controller.text.toLowerCase()))
-                            .toList();
-
-                        if (filter.contains(ajudabloc.listaTitulos
-                                .elementAt(1)
-                                .toString()
-                                .toLowerCase()) ||
-                            ajudabloc.controller.text.length == 0) {
-                          return Painel(
-                            titulo: ajudabloc.listaTitulos.elementAt(1),
-                            corpo: 'Corpo',
-                            painel: ajudabloc.painel4,
-                            snapshot: snapshot,
-                            color: ajudabloc.painel4.value == true
-                                ? Colors.blueAccent
-                                : Colors.black,
-                          );
-                        } else {
-                          return Container();
-                        }
-                      }),
-                  SizedBox(
-                    height: ScreenUtil().setHeight(10),
-                  ),
-                  StreamBuilder<Object>(
-                      stream: ajudabloc.painel5,
-                      builder: (context, snapshot) {
-                        //Transformando a lista em minuscula.
-                        List<String> filterLowerCase = [];
-                        ajudabloc.listaTitulos.forEach((element) {
-                          filterLowerCase.add(element.toLowerCase());
-                        });
-                        var filter = filterLowerCase
-                            .where((t) => t.contains(
-                                ajudabloc.controller.text.toLowerCase()))
-                            .toList();
-
-                        if (filter.contains(ajudabloc.listaTitulos
-                                .elementAt(0)
-                                .toString()
-                                .toLowerCase()) ||
-                            ajudabloc.controller.text.length == 0) {
-                          return Painel(
-                            titulo: ajudabloc.listaTitulos.elementAt(0),
-                            corpo: 'Corpo',
-                            painel: ajudabloc.painel5,
-                            snapshot: snapshot,
-                            color: ajudabloc.painel5.value == true
-                                ? Colors.blueAccent
-                                : Colors.black,
-                          );
-                        } else {
-                          return Container();
-                        }
-                      }),
-                  SizedBox(
-                    height: ScreenUtil().setHeight(10),
-                  ),
-                  StreamBuilder<Object>(
-                      stream: ajudabloc.painel6,
-                      builder: (context, snapshot) {
-                        //Transformando a lista em minuscula.
-                        List<String> filterLowerCase = [];
-                        ajudabloc.listaTitulos.forEach((element) {
-                          filterLowerCase.add(element.toLowerCase());
-                        });
-                        var filter = filterLowerCase
-                            .where((t) => t.contains(
-                                ajudabloc.controller.text.toLowerCase()))
-                            .toList();
-
-                        if (filter.contains(ajudabloc.listaTitulos
-                                .elementAt(1)
-                                .toString()
-                                .toLowerCase()) ||
-                            ajudabloc.controller.text.length == 0) {
-                          return Painel(
-                            titulo: ajudabloc.listaTitulos.elementAt(1),
-                            corpo: 'Corpo',
-                            painel: ajudabloc.painel6,
-                            snapshot: snapshot,
-                            color: ajudabloc.painel6.value == true
-                                ? Colors.blueAccent
-                                : Colors.black,
-                          );
-                        } else {
-                          return Container();
-                        }
-                      }),
-                  SizedBox(
-                    height: ScreenUtil().setHeight(10),
-                  ),
-                  StreamBuilder<Object>(
-                      stream: ajudabloc.painel7,
-                      builder: (context, snapshot) {
-                        //Transformando a lista em minuscula.
-                        List<String> filterLowerCase = [];
-                        ajudabloc.listaTitulos.forEach((element) {
-                          filterLowerCase.add(element.toLowerCase());
-                        });
-                        var filter = filterLowerCase
-                            .where((t) => t.contains(
-                                ajudabloc.controller.text.toLowerCase()))
-                            .toList();
-
-                        if (filter.contains(ajudabloc.listaTitulos
-                                //elementAt(equivalente ao titulo)
-                                .elementAt(1)
-                                .toString()
-                                .toLowerCase()) ||
-                            ajudabloc.controller.text.length == 0) {
-                          return Painel(
-                            titulo: ajudabloc.listaTitulos.elementAt(1),
-                            corpo: 'Corpo',
-                            painel: ajudabloc.painel7,
-                            snapshot: snapshot,
-                            color: ajudabloc.painel7.value == true
-                                ? Colors.blueAccent
-                                : Colors.black,
-                          );
-                        } else {
-                          return Container();
-                        }
-                      }),
-                  SizedBox(
-                    height: ScreenUtil().setHeight(10),
-                  ),
-                  StreamBuilder<Object>(
-                      stream: ajudabloc.painel8,
-                      builder: (context, snapshot) {
-                        //Transformando a lista em minuscula.
-                        List<String> filterLowerCase = [];
-                        ajudabloc.listaTitulos.forEach((element) {
-                          filterLowerCase.add(element.toLowerCase());
-                        });
-                        var filter = filterLowerCase
-                            .where((t) => t.contains(
-                                ajudabloc.controller.text.toLowerCase()))
-                            .toList();
-
-                        if (filter.contains(ajudabloc.listaTitulos
-                                .elementAt(0)
-                                .toString()
-                                .toLowerCase()) ||
-                            ajudabloc.controller.text.length == 0) {
-                          return Painel(
-                            titulo: ajudabloc.listaTitulos.elementAt(0),
-                            corpo: 'Corpo',
-                            painel: ajudabloc.painel8,
-                            snapshot: snapshot,
-                            color: ajudabloc.painel8.value == true
-                                ? Colors.blueAccent
-                                : Colors.black,
-                          );
-                        } else {
-                          return Container();
-                        }
-                      }),
-                  SizedBox(
-                    height: ScreenUtil().setHeight(10),
-                  ),
-                  StreamBuilder<Object>(
-                      stream: ajudabloc.painel9,
-                      builder: (context, snapshot) {
-                        //Transformando a lista em minuscula.
-                        List<String> filterLowerCase = [];
-                        ajudabloc.listaTitulos.forEach((element) {
-                          filterLowerCase.add(element.toLowerCase());
-                        });
-                        var filter = filterLowerCase
-                            .where((t) => t.contains(
-                                ajudabloc.controller.text.toLowerCase()))
-                            .toList();
-
-                        if (filter.contains(ajudabloc.listaTitulos
-                                .elementAt(1)
-                                .toString()
-                                .toLowerCase()) ||
-                            ajudabloc.controller.text.length == 0) {
-                          return Painel(
-                            titulo: ajudabloc.listaTitulos.elementAt(1),
-                            corpo: 'Corpo',
-                            painel: ajudabloc.painel9,
-                            snapshot: snapshot,
-                            color: ajudabloc.painel9.value == true
-                                ? Colors.blueAccent
-                                : Colors.black,
-                          );
-                        } else {
-                          return Container();
-                        }
-                      }),
-                  Container(
+      Expanded(
+        child: ScrollShadowContainer(
+          elevation: MaterialElevation.the4dp,
+          child: ListView.builder(
+              itemCount: ajudabloc.listaTitulos.length + 1,
+              itemBuilder: (BuildContext context, int index) {
+//Para colocar o Container no final da lista
+                if (index == ajudabloc.listaTitulos.length) {
+                  return Container(
                     padding: EdgeInsets.fromLTRB(
                         ScreenUtil().setHeight(0),
                         ScreenUtil().setHeight(0),
@@ -394,21 +85,67 @@ class Ajuda extends StatelessWidget {
                         SizedBox(
                           height: ScreenUtil().setHeight(15),
                         ),
-                        Text(
-                          'Fale com a gente',
-                          style: TextStyle(
-                              color: Colors.blueAccent,
-                              fontSize: 14.0,
-                              fontFamily: 'open-sans-semi-bold',
-                              fontWeight: FontWeight.bold),
+                        GestureDetector(
+                          onTap: (){
+                          },
+                          child: Text(
+                            'Fale com a gente',
+                            style: TextStyle(
+                                color: Colors.blue,
+                                fontSize: 14.0,
+                                fontFamily: 'open-sans-semi-bold',
+                                fontWeight: FontWeight.bold),
+                          ),
                         ),
                       ],
                     ),
-                  )
-                ],
-              ),
-            ),
-          ),
+                  );
+
+//A lista de paineis
+                }else{
+                  return StreamBuilder<Object>(
+                      stream: ajudabloc.qualPainel(index),
+                      builder: (context, snapshot) {
+//Transformando a lista em minuscula.
+                        List<String> filterLowerCase = [];
+                        ajudabloc.listaTitulos.forEach((element) {
+                          filterLowerCase.add(element.toLowerCase());
+                        });
+                        var filter = filterLowerCase
+                            .where((t) =>
+                            t.contains(
+                                ajudabloc.controller.text.toLowerCase()))
+                            .toList();
+
+                        if (filter.contains(ajudabloc.listaTitulos
+//elementAt(equivalente ao titulo)
+                            .elementAt(index)
+                            .toString()
+                            .toLowerCase()) ||
+                            ajudabloc.controller.text.length == 0) {
+                          print(ajudabloc.controller.text.length);
+                          return Painel(
+                            titulo: ajudabloc.listaTitulos.elementAt(index),
+                            corpo: ajudabloc.listaCorpo[index],
+                            painel: ajudabloc.qualPainel(index),
+                            snapshot: snapshot.data,
+                            color: snapshot.data == true
+                                ? Colors.blue
+                                : Colors.black,
+                          );
+                        } else {
+                          print('Caiu no else');
+                          return Container();
+                        }
+                      });
+
+                }
+
+              }),
+        ),
+      ),
+
+
         ],
       ),
     );
