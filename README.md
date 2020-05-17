@@ -21,7 +21,7 @@
 
 <h4>- Lista fica rolável se o número de painéis for maior que a tela</h4>
 
-<h4>- Paineis criados dinamicamente usando Bloc</h4>
+<h4>- Paineis criados dinamicamente usando Bloc e ListView.builder</h4>
 
 <h4>- Uso de um Bloc global</h4>
 
